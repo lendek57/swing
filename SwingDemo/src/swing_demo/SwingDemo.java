@@ -12,17 +12,17 @@ public class SwingDemo extends JPanel implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		jTextField.setText(((JButton)e.getSource()).getText());
+		jTextField.setText(((JButton)e.getSource()).getText() + "!");
 		System.out.println("is Event Dispatch Thread: " + SwingUtilities.isEventDispatchThread());
 	}
 
 	public SwingDemo() {
-		setBackground(Color.BLUE);
+		setBackground(Color.GREEN);
 		setLayout(new FlowLayout());
-//		setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
-		setBorder(BorderFactory.createEmptyBorder(25, 5, 5, 5)); // set margins
-		JButton button1 = new JButton("Button 1");
-		JButton button2 = new JButton("Button 2");
+		setBorder(BorderFactory.createLineBorder(Color.WHITE, 2));
+//		setBorder(BorderFactory.createEmptyBorder(25, 5, 5, 5)); // set margins
+		JButton button1 = new JButton("Start");
+		JButton button2 = new JButton("Stop");
 		button1.addActionListener(this);
 		button2.addActionListener(this);
 		add(button1);

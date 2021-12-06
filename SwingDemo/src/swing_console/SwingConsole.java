@@ -15,6 +15,7 @@ public class SwingConsole {
 			frame.setSize(width, height);
 			commonActions(frame);
 		});
+
 	}
 
 	public static void run(final JFrame frame) {
